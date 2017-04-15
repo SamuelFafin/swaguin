@@ -18,7 +18,7 @@ namespace Swaguin.Models
         public bool Favorite { get; set; }
         public string Email { get; set; }
         public DateTime Birthdate { get; set;}
-        public int PhoneNumber { get; set; }
+        public String PhoneNumber { get; set; }
         public string ImagePath { get; set; }
     }
 }

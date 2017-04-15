@@ -8,19 +8,15 @@
 	    CachingStrategy="RecycleElement"
 	    ItemsSource="{Binding .}"
 	    IsPullToRefreshEnabled="True"
-	    Refreshing="OnRefreshing"
-	    ItemTapped="OnItemTapped"
-	    ItemSelected="OnItemSelected"
 	    HasUnevenRows="True"
 	    IsGroupingEnabled="True"
 	    GroupDisplayBinding="{Binding Key}"
-	    GroupShortNameBinding="{Binding Key}"
-	    Footer="{Binding Count, Source={x:Static local:SimpsonFactory.Characters}}">
+	    GroupShortNameBinding="{Binding Key}">
 
 		<ListView.Header>
 		<ContentView Padding="0,5" BackgroundColor="#3498db">
 		    <Label FontSize="Large" TextColor="White"
-		           Text="The Simpsons" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+		           Text="Liste Contacts" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
 		</ContentView>
 		</ListView.Header>
 
@@ -38,24 +34,19 @@
 				<BoxView BackgroundColor="White" />
 
 				<Image WidthRequest="75" Aspect="AspectFit"
-				        Source="{Binding HeadshotUrl, Converter={StaticResource imageResourceCvt}}" />
+				        Source="{Binding ImzgePath}" />
 
 				<StackLayout Grid.Column="1" VerticalOptions="Center">
-				    <Label Text="{Binding Name}" FontSize="Medium" FontAttributes="Bold" />
+				    <Label Text="{Binding FirstName}" FontSize="Medium" FontAttributes="Bold" />
 				    <Label Text="{Binding Email}" FontSize="Small" TextColor="Accent" />
 				</StackLayout>
 
-				<Image IsVisible="{Binding IsFavorite}" Grid.Column="2"
+				<Image IsVisible="{Binding Favorite}" Grid.Column="2"
 				        VerticalOptions="Center"
 				        HorizontalOptions="End" Source="star.png" />
-
-				<Label Text="{Binding Dob, Converter={StaticResource birthdayCvt}, StringFormat='{0} yrs. old'}" 
-				        HorizontalOptions="End" VerticalOptions="End"
-				        Grid.Column="1" Grid.ColumnSpan="2"
-				        FontSize="Micro" TextColor="Accent" /> 
 				</Grid>
 				<ViewCell.ContextActions>
-					<MenuItem Text="Delete" Clicked="OnDelete" IsDestructive="true" />
+					<MenuItem Text="Delete" Clicked="OnDeleteContact" IsDestructive="true" />
 				</ViewCell.ContextActions>
 				</ViewCell>
 			</DataTemplate>

@@ -3,12 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Swaguin.ContactDetailPage">
 
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <local:GenderToIndexConverter x:Key="genderCvt" />
             <local:ImageResourceConverter x:Key="imageResourceCvt" />
         </ResourceDictionary>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
     <ScrollView>
         <StackLayout Spacing="10">

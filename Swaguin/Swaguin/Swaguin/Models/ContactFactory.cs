@@ -6,7 +6,7 @@ namespace Swaguin.Models
 {
 	public class ContactFactory
 	{
-		public static List<Contact> Contacts { get; private set; }
+		public static IList<Contact> Contacts { get; private set; }
 
 		static ContactFactory()
 		{
@@ -18,7 +18,7 @@ namespace Swaguin.Models
 					Favorite = false,
 					Email = "stephanie.blondeau@gmail.com",
 					Birthdate = new DateTime(),
-					PhoneNumber = 6616984830,
+					PhoneNumber = "012",
 					ImagePath = ""
 				}
 			};

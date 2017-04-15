@@ -97,7 +97,7 @@ namespace Swaguin.ViewModel
             }
         }
 
-        public int PhoneNumber
+        public String PhoneNumber
         {
             get { return contact.PhoneNumber; }
             set

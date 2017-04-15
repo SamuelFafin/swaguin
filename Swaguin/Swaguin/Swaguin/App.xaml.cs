@@ -18,7 +18,7 @@ namespace Swaguin
 
             //set database path first, then retrieve main page
             SwaguinData = new SwaguinDatabase(dbPath);
-
+            Insert();
             GetAll();
 
             MainPage = new Swaguin.MainPage();

@@ -40,6 +40,7 @@
     <Compile Include="ContactListePage.xaml.cs">
       <DependentUpon>ContactListePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MainPage.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\ContactManager.cs" />
     <Compile Include="Models\IContactLoader.cs" />

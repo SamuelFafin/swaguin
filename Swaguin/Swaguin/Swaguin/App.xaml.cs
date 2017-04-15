@@ -6,12 +6,25 @@ using System.Text;
 using Xamarin.Forms;
 using Swaguin.Models;
 using System.Collections.ObjectModel;
+using Xamarin.Forms.Xaml;
+using Swaguin.ViewModel;
+using XamarinUniversity.Services;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace Swaguin
 {
     public partial class App : Application
     {
         public static SwaguinDatabase SwaguinData { get; private set; }
+
+        static App()
+        {
+            // Register dependencies.
+            DependencyService.Register<MainViewModel>();
+            // Register standard XamU services
+            XamUInfrastructure.Init();
+        }
+
         public App(string dbPath)
         {
             InitializeComponent();
@@ -21,7 +34,7 @@ namespace Swaguin
             Insert();
             GetAll();
 
-            MainPage = new Swaguin.MainPage();
+            MainPage = new MainPage();
         }
 
         // A transférer 

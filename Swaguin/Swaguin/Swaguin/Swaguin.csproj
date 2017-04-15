@@ -47,6 +47,7 @@
     <Compile Include="SwaguinDatabase.cs" />
     <Compile Include="ViewModel\ContactViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="Models\ContactFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="SQLite-net, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
